@@ -1,0 +1,48 @@
+.icon-btn {
+  border: none; /* 移除按钮的边框 */
+  background: none; /* 移除按钮的背景 */
+  cursor: pointer;
+  font-size: 24px;
+  color: black; /* 设置按钮颜色 */
+  /* width: 10px; */
+  /* position: 0; */
+  padding: 0;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 40%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999;
+}
+
+.popup-content {
+  height: 100%; /* 设置内容区域高度 */
+  overflow-y: auto; /* 允许内容区域垂直溢出时出现滚动条 */
+  background-color: #fff;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1; /* 保证关闭按钮在弹窗文字上层 */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

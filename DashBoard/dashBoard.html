@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .popup-content a {
+            text-decoration: none;
+        }
+    </style>
+    <title>32105531_可视化大作业</title>
+    <script src="lib/echarts.min.js"></script>
+    <script src="lib/echarts-gl.min.js"></script>
+    <link rel="stylesheet" href="css/dashBoard.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="lib/jquery.js"></script>
+
+</head>
+
+<body>
+    <!-- 标题 -->
+    <header>
+        <h1>学历、工作年限与工资</h1>
+    </header>
+
+    <!-- 主体 -->
+    <div class="main">
+        <!-- 左侧留白 -->
+        <div class="left-box"></div>
+
+        <!-- 仪表 -->
+        <div class="main-box">
+            <!-- 饼图&柱状图 -->
+            <div class="box-1">
+                <!-- 考研饼图 -->
+                <div class="box1">
+                    <h2>本校毕业去向</h2>
+                    <div class="links">
+                        <a href="javascript:0;" data-index="0">全校</a>
+                        <a href="javascript:1;" data-index="1">计算</a>
+                    </div>
+                    <div class="echarts">1</div>
+                </div>
+                <!-- 学院柱状图 -->
+                <div class="box2">
+                    <h2> 各学院就业相关 </h2>
+                    <div class="links">
+                        <a href="javascript:0;">月收入</a>
+                        <a href="javascript:1;">专业相关度</a>
+                        <a href="javascript:2;">离职率</a>
+                        <a href="javascript:4;">就业满意度</a>
+                    </div>
+                    <div class="echarts">2</div>
+                </div>
+
+
+            </div>
+            <!-- 变化曲线&轮播 -->
+            <div class="box-2">
+                <!-- 2022收入 -->
+                <div class="box3">
+                    <h2>薪资水平对比</h2>
+                    <div class="echarts">3</div>
+                </div>
+                <!-- 轮播招聘 -->
+                <div class="box4">
+                    <h2>应届前端招聘信息</h2>
+                    <div class="show">
+                        <div class="show1">
+                            <h3 id="jobTitle1">BOSS直聘</h3>
+                            <p><strong>公司：</strong><span id="brandName1"></span></p>
+                            <p><strong>薪资：</strong><span id="salary1"></span></p>
+                            <p><strong>城市：</strong><span id="city1"></strong><span id="district1"></span></p>
+                            <p><strong>学历：</strong><span id="jobDegree1"></span></p>
+                        </div>
+                        <div class="show2">
+                            <h3 id="jobTitle2">BOSS直聘</h3>
+                            <p><strong>公司：</strong><span id="brandName2"></span></p>
+                            <p><strong>薪资：</strong><span id="salary2"></span></p>
+                            <p><strong>城市：</strong><span id="city2"></strong><span id="district2"></span></p>
+                            <p><strong>学历：</strong><span id="jobDegree2"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 全国统计 -->
+                <div class="box5">
+                    <h2>CFPS毕业3年内年收入全国统计</h2>
+                    <div class="echarts">5</div>
+                </div>
+
+
+            </div>
+            <!-- GL&地图 -->
+            <div class="box-3">
+                <!-- 地图 -->
+                <div class="other">
+                    <div class="box8">
+                        <h2>CFPS全国本科年收入中位数</h2>
+                        <div class="echarts">8</div>
+                    </div>
+                    <!-- <div class="box9"></div> -->
+                </div>
+
+                <!-- GL -->
+                <div class="gl">
+                    <div class="box6">
+                        <h2>CFPS各学历年收入</h2>
+                        <div class="echarts">6</div>
+                    </div>
+                    <div class="box7">
+                        <h2>明瑟收入方程</h2>
+                        <div class="echarts">7</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 右侧留白 -->
+        <div class="right-box">
+            <button id="popupBtn" class="icon-btn">&#9432;</button>
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup-content">
+                    <span class="close-btn" id="closeBtn">&times;</span>
+                    <h2>关于</h2>
+                    <h6>关闭请按键盘任意键或右上方×图标</h6>
+                    <br>
+                    <p> 项目说明：
+                    <pre>2022年8月，国家统计局暂停公布青年失业率。</pre>
+                    <pre>我们学习 AI、学习大数据、学习可视化，</pre>
+                    <pre>但当前的学习真的能让我们在即将到来的将来获得满意的收入吗？</pre>
+                    <pre>究竟是什么在影响着我们的收入？而这其中，又有多少是我们可以自己掌控的？</pre>
+                    <br>数据来源：
+                    <p>
+                        <br> <a href="http://www.zucc.edu.cn/col/col105/index.html">浙大城市学院-信息公开年报</a>
+                        <br> <a href="http://career.zucc.edu.cn/news/index?tag=tzgg">浙大城市学院就业信息网-通知公告</a>
+                        <br> <a href="https://www.zhipin.com/">BOSS直聘</a>
+                        <br> <a href="https://www.isss.pku.edu.cn/cfps/">CFPS中国家庭追踪调查</a>
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <p><a href="./img/smile.jpg">-END-</a></p>
+                </div>
+            </div>
+            <script src="js/script.js"></script>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>
+            Copyright © 2023数据可视化 &middot; All Rights Reserved &middot; me
+        </p>
+        <p class="time"> 当前时间：</p>
+        <script>
+            var t = null;
+            t = setTimeout(time, 1000); //開始运行
+            function time() {
+                clearTimeout(t); //清除定时器
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var h = dt.getHours(); //获取时
+                var m = dt.getMinutes(); //获取分
+                var s = dt.getSeconds(); //获取秒
+                document.querySelector(".time").innerHTML =
+                    "当前时间：" +
+                    y +
+                    "年" +
+                    mt +
+                    "月" +
+                    day +
+                    "日 - " +
+                    h +
+                    "时" +
+                    m +
+                    "分" +
+                    s +
+                    "秒";
+                t = setTimeout(time, 1000); //设定定时器，循环运行
+            }
+        </script>
+
+    </footer>
+</body>
+<!-- 先导入jquery，再运行dashBoard.js，否则不能正确识别符号 -->
+<script src="lib/jquery.js"></script>
+<script src="js/dashBoard.js"></script>
+<!-- myMap依赖于China -->
+<script src="lib/china.js"></script>
+<script src="js/myMap.js"></script>
+
+</html>
