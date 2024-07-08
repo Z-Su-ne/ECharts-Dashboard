@@ -17,5 +17,5 @@
 
 
 ### 4. 最终效果
-lnk封装成bat，实现点击运行
+bat脚本，实现一键运行
 ![Alt text](image.png)
